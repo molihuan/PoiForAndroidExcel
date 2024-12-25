@@ -150,6 +150,11 @@ public interface CellStyle {
     VerticalAlignment getVerticalAlignment();
 
     /**
+     * 判断是否是默认的垂直对齐方式
+     */
+    boolean isDefaultVerticalAlignment();
+
+    /**
      * set the degree of rotation for the text in the cell.
      *
      * Note: HSSF uses values from -90 to 90 degrees, whereas XSSF 

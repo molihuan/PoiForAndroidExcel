@@ -343,6 +343,10 @@ public final class HSSFCellStyle implements CellStyle, Duplicatable {
         return VerticalAlignment.forInt(_format.getVerticalAlignment());
     }
 
+    public boolean isDefaultVerticalAlignment(){
+        return false;
+    }
+
     /**
      * set the degree of rotation for the text in the cell
      *

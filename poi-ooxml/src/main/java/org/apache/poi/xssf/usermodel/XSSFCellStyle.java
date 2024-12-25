@@ -641,6 +641,21 @@ public class XSSFCellStyle implements CellStyle, Duplicatable {
     }
 
     /**
+     * 判断是否是默认的垂直对齐方式
+     */
+    @Override
+    public boolean isDefaultVerticalAlignment() {
+        if(!_cellXf.getApplyAlignment()) return true;
+
+//        CTCellAlignment align = _cellXf.getAlignment();
+//        if(align != null && align.isSetVertical()) {
+//            return false;
+//        }
+//        return true;
+        return false;
+    }
+
+    /**
      * Whether the text should be wrapped
      *
      * @return  a boolean value indicating if the text in a cell should be line-wrapped within the cell.

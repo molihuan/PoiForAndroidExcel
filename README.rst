@@ -104,3 +104,9 @@ To build the jar files for poi, poi-ooxml, poi-ooxml-lite, poi-ooxml-full and po
 .. _ViewVC repo browser: https://svn.apache.org/viewvc/poi/trunk
 .. _GitHub git mirror: https://github.com/apache/poi
 .. _How To Build page: http://poi.apache.org/devel/
+
+
+org/apache/poi/ss/usermodel/CellStyle.java
+新增接口
+isDefaultVerticalAlignment()
+//判断是否是默认的垂直对齐方式
