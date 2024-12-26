@@ -217,6 +217,14 @@ public interface Sheet extends Iterable<Row> {
      */
     float getColumnWidthInPixels(int columnIndex);
 
+    /**
+     * molihuan
+     *
+     * @param width
+     */
+    default void setColumnWidthInPixels(int columnIndex,float width){
+
+    }
 
     /**
      * Set the default column width for the sheet (if the columns do not define their own width)
