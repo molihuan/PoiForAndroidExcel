@@ -260,6 +260,12 @@ public final class XSSFPicture extends XSSFShape implements Picture {
         return getImageDimension(picData.getPackagePart(), picData.getPictureType());
     }
 
+    @Override
+    public float[] getDimension() {
+        Dimension imageDimension = getImageDimension();
+        return new float[]{imageDimension.width,imageDimension.height};
+    }
+
     /**
      * Return picture data for this shape
      *

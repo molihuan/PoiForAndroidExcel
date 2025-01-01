@@ -79,6 +79,10 @@ public interface Picture extends Shape {
      * @return image dimension in pixels
      */
     Dimension getImageDimension();
+
+    default float[] getDimension(){
+        return new float[]{0, 0};
+    }
     
     /**
      * Return picture data for this picture
