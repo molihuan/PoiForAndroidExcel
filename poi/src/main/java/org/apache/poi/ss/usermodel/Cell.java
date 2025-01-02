@@ -17,6 +17,7 @@
 
 package org.apache.poi.ss.usermodel;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Calendar;
@@ -129,6 +130,15 @@ public interface Cell {
      *        will change the cell to a numeric cell and set its value.
      */
     void setCellValue(double value);
+
+    /**
+     * ml
+     * 新增
+     * @param value
+     */
+    default void setCellValue(BigDecimal value){
+
+    }
 
     /**
      * <p>Converts the supplied date to its equivalent Excel numeric value and sets

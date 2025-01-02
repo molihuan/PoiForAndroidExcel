@@ -17,6 +17,7 @@
 
 package org.apache.poi.xssf.usermodel;
 
+import java.math.BigDecimal;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
@@ -263,6 +264,11 @@ public final class XSSFCell extends CellBase {
 
     @Override
     public void setCellValueImpl(double value) {
+        _cell.setT(STCellType.N);
+        _cell.setV(String.valueOf(value));
+    }
+    @Override
+    public void setCellValueImpl(BigDecimal value) {
         _cell.setT(STCellType.N);
         _cell.setV(String.valueOf(value));
     }

@@ -17,6 +17,7 @@
 
 package org.apache.poi.xssf.streaming;
 
+import java.math.BigDecimal;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
@@ -178,6 +179,10 @@ public class SXSSFCell extends CellBase {
         } else {
             ((NumericValue)_value).setValue(value);
         }
+    }
+    @Override
+    public void setCellValueImpl(BigDecimal value) {
+
     }
 
     /**

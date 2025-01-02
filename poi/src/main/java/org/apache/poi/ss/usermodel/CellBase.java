@@ -23,10 +23,12 @@ import org.apache.poi.ss.util.CellAddress;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.ss.util.CellReference;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Objects;
 
 /**
  * Common implementation-independent logic shared by all implementations of {@link Cell}.
@@ -193,6 +195,14 @@ public abstract class CellBase implements Cell {
             setCellValueImpl(value);
         }
     }
+    @Override
+    public void setCellValue(BigDecimal value) {
+        if (Objects.isNull(value)){
+            setCellErrorValue(FormulaError.NUM.getCode());
+        } else {
+            setCellValueImpl(value);
+        }
+    }
 
     /**
      * Implementation-specific way to set a numeric value.
@@ -202,6 +212,8 @@ public abstract class CellBase implements Cell {
      * @param value the new value to set
      */
     protected abstract void setCellValueImpl(double value);
+
+    protected abstract void setCellValueImpl(BigDecimal value);
 
     @Override
     public void setCellValue(Date value) {

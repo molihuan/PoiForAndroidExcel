@@ -17,6 +17,7 @@
 
 package org.apache.poi.hssf.usermodel;
 
+import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.util.Calendar;
@@ -441,6 +442,9 @@ public class HSSFCell extends CellBase {
                 ((FormulaRecordAggregate)_record).setCachedDoubleResult(value);
                 break;
         }
+    }
+    protected void setCellValueImpl(BigDecimal value) {
+
     }
 
     /**
