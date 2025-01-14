@@ -81,6 +81,15 @@ public final class HSSFRow implements Row, Comparable<HSSFRow> {
     }
 
     /**
+     * 新增
+     * ml
+     * @return
+     */
+    public HSSFCell[] getCells() {
+        return cells;
+    }
+
+    /**
      * Creates an HSSFRow from a low level RowRecord object.  Only HSSFSheet should do
      * this.  HSSFSheet uses this when an existing file is read in.
      *

@@ -107,6 +107,8 @@ public class HSSFColor implements Color {
          */
         AUTOMATIC            (0x40,   -1, 0x000000);
 
+
+
         private final HSSFColor color;
 
         HSSFColorPredefined(int index, int index2, int rgb) {
